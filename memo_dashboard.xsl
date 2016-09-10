@@ -20,6 +20,12 @@
     <div id="content">
         <div class="con_module">
             <h2>Memo Note</h2>
+            <form method="post" action="modify.php">
+                <textarea cols="97" rows="15" name="memo">
+                    <xsl:value-of select="'temp'"/>
+                </textarea><br/>
+                <input type="submit" value="modify"></input>
+            </form>
         </div>
       </div>   
     </xsl:template>
