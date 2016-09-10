@@ -22,7 +22,7 @@
             <h2>Memo Note</h2>
             <form method="post" action="modify.php">
                 <textarea cols="97" rows="15" name="memo">
-                    <xsl:value-of select="'temp'"/>
+                    <xsl:value-of select="$modified"/>
                 </textarea><br/>
                 <input type="submit" value="modify"></input>
             </form>

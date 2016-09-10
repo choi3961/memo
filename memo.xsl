@@ -4,6 +4,8 @@
 
     <xsl:import href="common.xsl"/>
     <xsl:import href="memo_dashboard.xsl"/>
+    
+    <xsl:param name="mod"/>
     <!-- Override the basic frame of presentation for HTML title -->
     <xsl:template match="/">
         <html>
