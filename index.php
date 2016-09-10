@@ -1,7 +1,4 @@
 <?php 
-
-echo "Hello memo";
-/*******
 // Load XML file
 $xml = new DOMDocument;
 $xml->load('memo.xml');
@@ -17,5 +14,4 @@ $proc = new XSLTProcessor;
 $proc->importStyleSheet($xsl);
 
 echo $proc->transformToXML($xml);
-******/
 ?>
