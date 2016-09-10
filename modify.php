@@ -4,5 +4,7 @@ $memo = $_POST['memo'];
 
 fwrite($file, $memo);
 
-echo "file modified";
+fclose($file);
+
+echo "file modified :".$memo;
 ?>
