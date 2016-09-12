@@ -1,6 +1,6 @@
 <?php 
 
-$modified = file_get_contents("memo.txt");
+$modified = file_get_contents("../html_p/memo.txt");
 
 // Load XML file
 $xml = new DOMDocument;

@@ -1,12 +1,12 @@
 <?php 
-$file = fopen("memo.txt", "w");
+$file = fopen("../html_p/memo.txt", "w");
 $memo = $_POST['memo'];
 
 fwrite($file, $memo);
 
 fclose($file);
 
-$modified = file_get_contents("memo.txt");
+$modified = file_get_contents("../html_p/memo.txt");
 
 // Load XML file
 $xml = new DOMDocument;
