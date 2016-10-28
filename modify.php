@@ -1,10 +1,9 @@
 <?php 
-$file = fopen("../html_p/memo.txt", "w");
-$memo = $_POST['memo'];
-
-fwrite($file, $memo);
-
-fclose($file);
+if($_SERVER['REQUEST_METHOD']=='POST'){
+    if(!empty($_POST['memo'])){
+        file_put_contents("../html_p/memo.txt",$_POST['memo']);
+    }
+}
 
 $modified = file_get_contents("../html_p/memo.txt");
 
@@ -26,4 +25,5 @@ $proc->setParameter('', 'modified', $modified);
 
 echo $proc->transformToXML($xml);
 echo "memo.txt file is modified";
+
 ?>
