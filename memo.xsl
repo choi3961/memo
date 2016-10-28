@@ -10,7 +10,7 @@
     <xsl:template match="/">
         <html>
             <head>
-                <title>All Webs</title>
+                <title>Memo</title>
                 <link rel="stylesheet" type="text/css" href="style.css"/>
             </head>
             
