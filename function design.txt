@@ -1,0 +1,63 @@
+===============================================================================
+TRToCsvStyle  function : return csvstyle data from OnreceiveTrdata in kiwoom API
+
+Input, output : 1.List for requests
+                   2. order code
+                   3. RQname
+
+Black Box
+	string csvStyleHeader = "";         // header data
+            string rowData = "";                // row data
+
+            List<string> csvStyle = new List<string>();     // csv style in memory.
+
+	1.header part :
+	            foreach (string item in list)
+            	{
+                		csvStyleHeader = csvStyleHeader + $"{item},";
+            	}
+            	csvStyleHeader.Trim(',');
+            	csvStyle.Add(csvStyleHeader);
+
+
+	2. body part :
+		int count = axKHOpenAPI1.GetRepeatCnt(orderCode, rqName);
+		for (int i = 0; i < count; i++)
+            	{
+                		foreach (string item in list)
+                		{
+                    			rowData = rowData + axKHOpenAPI1.GetCommData(orderCode, rqName, i, item) + ",";
+                		}
+                			rowData.Trim(',');
+                			csvStyle.Add(rowData);
+            	}
+		return csvStyle;
+
+================================================================================
+
+===============================================================================
+ExtractColumndata  function : return column data from csvstyle data.
+
+Input, output : 1. column name
+	       2. string[] csvstyledata
+
+Black Box
+
+ 	body part :
+	foreach(string str in csvstyledata)
+	{
+		int j =0; 
+		string[] items = str.split(',');
+
+		// header part
+		if()
+		{
+		}
+		
+		// body part
+		
+	}
+	
+	return column data[]
+
+================================================================================
